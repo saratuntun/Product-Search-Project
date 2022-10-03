@@ -126,3 +126,24 @@
 2022-10-03 14:13:04.276 INFO  (qtp1266534280-26) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1664805623602&since=0} status=0 QTime=0
 2022-10-03 14:13:14.283 INFO  (qtp1266534280-27) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1664805623602&since=0} status=0 QTime=0
 2022-10-03 14:13:24.297 INFO  (qtp1266534280-26) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1664805623602&since=0} status=0 QTime=0
+2022-10-03 14:13:34.298 INFO  (qtp1266534280-27) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1664805623602&since=0} status=0 QTime=0
+2022-10-03 14:13:44.309 INFO  (qtp1266534280-26) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1664805623602&since=0} status=0 QTime=0
+2022-10-03 14:13:54.314 INFO  (qtp1266534280-27) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1664805623602&since=0} status=0 QTime=0
+2022-10-03 14:14:04.325 INFO  (qtp1266534280-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1664805623602&since=0} status=0 QTime=1
+2022-10-03 14:14:14.334 INFO  (qtp1266534280-26) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1664805623602&since=0} status=0 QTime=0
+2022-10-03 14:14:24.339 INFO  (qtp1266534280-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1664805623602&since=0} status=0 QTime=0
+2022-10-03 14:14:34.351 INFO  (qtp1266534280-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1664805623602&since=0} status=0 QTime=0
+2022-10-03 14:14:43.681 INFO  (ShutdownMonitor) [   ] o.e.j.s.AbstractConnector Stopped ServerConnector@522a32b1{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2022-10-03 14:14:43.682 INFO  (ShutdownMonitor) [   ] o.e.j.s.session node0 Stopped scavenging
+2022-10-03 14:14:43.687 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=303846650
+2022-10-03 14:14:43.692 INFO  (coreCloseExecutor-21-thread-1) [   ] o.a.s.c.SolrCore [new_core]  CLOSING SolrCore org.apache.solr.core.SolrCore@2c448b6d
+2022-10-03 14:14:43.692 INFO  (coreCloseExecutor-21-thread-1) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.new_core tag=SolrCore@2c448b6d
+2022-10-03 14:14:43.692 INFO  (coreCloseExecutor-21-thread-1) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@79619f99: rootName = null, domain = solr.core.new_core, service url = null, agent id = null] for registry solr.core.new_core/com.codahale.metrics.MetricRegistry@5e49feb6
+2022-10-03 14:14:43.710 INFO  (coreCloseExecutor-21-thread-1) [   ] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2022-10-03 14:14:43.722 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2022-10-03 14:14:43.722 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@7b66322e: rootName = null, domain = solr.node, service url = null, agent id = null] for registry solr.node/com.codahale.metrics.MetricRegistry@3f5d8467
+2022-10-03 14:14:43.727 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2022-10-03 14:14:43.727 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@6015a4a5: rootName = null, domain = solr.jvm, service url = null, agent id = null] for registry solr.jvm/com.codahale.metrics.MetricRegistry@51867857
+2022-10-03 14:14:43.729 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2022-10-03 14:14:43.729 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@6d0b0da6: rootName = null, domain = solr.jetty, service url = null, agent id = null] for registry solr.jetty/com.codahale.metrics.MetricRegistry@34d4df9
+2022-10-03 14:14:43.741 INFO  (ShutdownMonitor) [   ] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@f27ea3{/solr,null,STOPPED}{/Users/liukun/Documents/22F/Product-Search-Project/solr/server/solr-webapp/webapp}
