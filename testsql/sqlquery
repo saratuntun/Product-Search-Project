@@ -1,0 +1,57 @@
+CREATE TABLE `ProductFeed` (
+  `id` varchar(100) NOT NULL,
+  `SkuID` varchar(100) NOT NULL,
+  `ImageURL` varchar(300) DEFAULT NULL,
+  `AdditionalImageURL` varchar(300) DEFAULT NULL,
+  `StyleID` varchar(100) DEFAULT NULL,
+  `ClassID` varchar(100) DEFAULT NULL,
+  `Color` varchar(100) DEFAULT NULL,
+  `ColorCode` varchar(100) DEFAULT NULL,
+  `ColorFamily` varchar(100) DEFAULT NULL,
+  `Size` varchar(100) DEFAULT NULL,
+  `SizeID` varchar(100) DEFAULT NULL,
+  `DepartmentID` varchar(100) DEFAULT NULL,
+  `DissectionCode` varchar(100) DEFAULT NULL,
+  `IsHazmat` tinyint(1) DEFAULT '0',
+  `IsRedline` tinyint(1) DEFAULT '0',
+  `IsPromoted` tinyint(1) DEFAULT '0',
+  `TaxCode` varchar(20) DEFAULT NULL,
+  `Vendor` varchar(20) DEFAULT NULL,
+  `ListPrice` decimal(10,2) DEFAULT NULL,
+  `SalePrice` varchar(100) DEFAULT NULL,
+  `SalePriceEffectiveDate` varchar(100) DEFAULT NULL,
+  `CurrencyCode` char(3) DEFAULT 'USD',
+  `IsShoprunnerEligible` tinyint(1) DEFAULT '0',
+  `Title` mediumtext,
+  `Link` varchar(300) DEFAULT NULL,
+  `ProdDescription` mediumtext,
+  `StartDate` DATE DEFAULT NULL,
+  `FeatureColor` tinyint(1) DEFAULT '0',
+  `FeatureColorCategory` varchar(300) DEFAULT NULL,
+  `RelatedProducts` varchar(300) DEFAULT NULL,
+  `PreOrder` tinyint(1) DEFAULT '0',
+  `HandlingCode` varchar(300) DEFAULT NULL,
+  `Video` varchar(300) DEFAULT NULL,
+  `Proportion` varchar(100) DEFAULT NULL,
+  `ProportionProducts` varchar(100) DEFAULT NULL,
+  `Master_style` varchar(100) DEFAULT NULL,
+  `CannotReturn` tinyint(1) DEFAULT '0',
+  `GreatFind` tinyint(1) DEFAULT '0',
+  `WebExclusive` tinyint(1) DEFAULT '0',
+  `NyDeals` tinyint(1) DEFAULT '0',
+  `PromoTagline` mediumtext,
+  `PartiallyPromoted` tinyint(1) DEFAULT '0',
+  `ProductCategory` mediumtext,
+  `SortOrder` varchar(300) DEFAULT NULL,
+  `QuantityCode` varchar(300) DEFAULT NULL,
+  `AverageRating` decimal(10,4) DEFAULT NULL,
+  PRIMARY KEY (`SkuID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+SET GLOBAL local_infile=1;
+
+LOAD DATA LOCAL INFILE './secure/Product_feed_new.tsv' INTO TABLE ProductFeed
+FIELDS TERMINATED BY '\t'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
