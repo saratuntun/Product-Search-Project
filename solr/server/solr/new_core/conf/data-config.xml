@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataConfig>
+<dataSource type="JdbcDataSource" driver="com.mysql.cj.jdbc.Driver" url="jdbc:mysql://localhost:3306/applications" user="root" password="123456kk" />
+<document>
+    <entity dataSource="JdbcDataSource" name="ProductFeed" query="select id, SkuID, ImageURL, ProdDescription, AverageRating from ProductFeed;" >
+        <field column="id" name="id"/>
+        <field column="SkuID" name="SkuID"/>
+        <field column="ImageURL" name="ImageURL"/>
+        <field column="ProdDescription" name="ProdDescription"/>
+        <field column="AverageRating" name="AverageRating"/>
+    </entity>
+</document>
+</dataConfig>
