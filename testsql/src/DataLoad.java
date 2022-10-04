@@ -119,8 +119,12 @@ public class DataLoad {
             // Connect to database
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
-        } catch (SQLException | ClassNotFoundException | IOException e) {
-            e.printStackTrace();
+        } catch (SQLException e) {
+            System.out.println("Errors occur when executing SQL query.");
+        } catch (ClassNotFoundException e) {
+            System.out.println("Errors occur when registering the db driver.");
+        } catch (IOException e) {
+            System.out.println("Errors occur when loading sql properties file.");
         }
         return conn;
     }
@@ -148,7 +152,7 @@ public class DataLoad {
             conn.close();
         } catch (SQLException e) {
             conn.close();
-            e.printStackTrace();
+            System.out.println("error found when executing SQL query.");
         }
     }
 
