@@ -12,7 +12,6 @@
     <form action="searchProduct" method="GET">
         <label for="kw">Type the keyword.</label>
         <input type="text" id="kw" name="searchWord" value="" /><br>
-
         <label for="sku">Type the skuID.</label>
         <input type="text" id="sku" name="skuID" value="" /><br>
         <input type="submit" value="Search" />

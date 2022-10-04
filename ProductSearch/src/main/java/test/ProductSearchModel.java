@@ -24,11 +24,31 @@ public class ProductSearchModel {
     responseHeaderJson responseHeader = null;
     responseBodyJson responseBody = null;
 
+
     /**
-     *
-     * @param input
-     * @param by
-     * @return
+     * When user search by skuID, it will return a list (contains one product record).
+     * @param skuID skuID user input
+     * @return ArrayList of product entries
+     */
+    public ArrayList<productDetail> searchInSolrByID(String skuID) {
+        return searchInSolrBy(skuID, "skuID");
+    }
+
+    /**
+     * When user search by keyword, it will return a list of at most 20 result.
+     * @param keyword keyword user input
+     * @return ArrayList of product entries
+     */
+    public ArrayList<productDetail> searchInSolrByKeyword(String keyword) {
+        return searchInSolrBy(keyword, "keyword");
+    }
+
+    /**
+     * When user search by keyword, it will return a list of at most 20 result.
+     * when both id and keyword provided, id is the first priority
+     * @param input keyword or skuID
+     * @param by by keyword or by skuID
+     * @return ArrayList of product entries
      */
     public ArrayList<productDetail> searchInSolrBy(String input, String by) {
         ArrayList<productDetail> productList = new ArrayList<>();
@@ -66,7 +86,6 @@ public class ProductSearchModel {
                 productDetail productInfo = gson.fromJson(product_content_string, productDetail.class);
                 productList.add(productInfo);
             }
-
             for(int i = 0; i < productList.size(); i++){
                 System.out.println(productList.get(i).getAverageRating());
                 System.out.println(productList.get(i).getId());
@@ -76,24 +95,10 @@ public class ProductSearchModel {
             }
 
         } catch (UnsupportedEncodingException e) {
-            System.out.println("Cannot access to the url");
+            System.out.println("Error when encoding input with url usable format.");
         }
         return productList;
 
-
-    }
-    public ArrayList<productDetail> searchInSolrByID(String skuID) {
-        return searchInSolrBy(skuID, "skuID");
-    }
-
-
-    /**
-     *
-     * @param keyword
-     * @return
-     */
-    public ArrayList<productDetail> searchInSolrByKeyword(String keyword) {
-        return searchInSolrBy(keyword, "keyword");
     }
 
     /**
